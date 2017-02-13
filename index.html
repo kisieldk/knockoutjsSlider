@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom jQuery-UI slider wiht knockoutjs</title>
+	<meta charset="utf-8" />
+	<link href="Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+	<link href="Content/jquery-ui-slider-pips.css" rel="stylesheet" />
+	<link href="Content/CircleSlider.css" rel="stylesheet" />
+</head>
+<body>
+<div>
+	<h1>Custom jQuery-UI slider wiht knockoutjs example</h1>
+</div>
+<div>
+	<h2>Select loan amount</h2>
+	<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all ui-slider-pips circles-slider" data-bind="jqSliderLoanAmount: loanAmount, jqOptions: { min: 100, max: 600,step:10 }"></div>
+	Loan amount ($): <input data-bind="value: loanAmount"/>
+	<hr/>
+</div>
+
+	
+<div>
+	<h2>Select period</h2>
+	<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all ui-slider-pips circles-slider" data-bind="jqSliderPeriodValue: periodValue, jqOptions: { min: 5, max: 30,step:1 }"></div>
+	Period(Years): <input data-bind="value: periodValue"/>
+	<hr />
+</div>
+
+<div>	
+	<h2>Instalment Value ($): <strong><span data-bind="text: instalment()"></span></strong></h2>
+</div>
+<script src="Scripts/jquery-3.1.1.min.js"></script>
+<script src="Scripts/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="Scripts/knockout-3.4.1.js"></script>
+<script src="Scripts/jquery-ui-slider-pips.js"></script>
+<script src="AppViewModel.js"></script>
+</body>
+</html>
+<!--https://github.com/kisieldk/knockoutjsSlider.git-->
